@@ -42,8 +42,10 @@ model.fit(X_train, y_train)
 
 # ========== 5. Evaluation ==========
 y_pred = model.predict(X_test)
+y_prob = model.predict_proba(X_test)
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
+print(y_prob)
 
 # ========== 6. Interpretability ==========
 # Feature Importance (Global)
