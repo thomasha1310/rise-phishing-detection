@@ -1,4 +1,5 @@
 pandas
+ipykernel 
 numpy
 lime
 scikit-learn
