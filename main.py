@@ -75,11 +75,11 @@ print("\nExplaining instance:", raw_X_test.iloc[idx])
 exp = explainer.explain_instance(raw_X_test.iloc[idx], pipeline.predict_proba, num_features=10)
 
 # Save as HTML
-exp.save_to_file('lime_explanation.html')
+exp.save_to_file('./generated/lime_explanation.html')
 
 # ========== 8. Save Model (Optional) ==========
 import joblib
-joblib.dump(model, 'phishing_model.pkl')
-joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
+joblib.dump(model, './generated/phishing_model.pkl')
+joblib.dump(vectorizer, './generated/tfidf_vectorizer.pkl')
 
 print("\nModel and vectorizer saved.")
