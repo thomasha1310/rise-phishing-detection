@@ -5,3 +5,5 @@ lime
 scikit-learn
 torch
 transformers
+seaborn
+matplotlib
