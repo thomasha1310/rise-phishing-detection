@@ -208,3 +208,5 @@ __marimo__/
 
 generated/
 temp/
+
+.DS_Store
