@@ -3,3 +3,5 @@ ipykernel
 numpy
 lime
 scikit-learn
+torch
+transformers
