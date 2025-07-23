@@ -1,9 +1,12 @@
+python
 pandas
 ipykernel 
 numpy
 lime
 scikit-learn
-torch
+pytorch
 transformers
 seaborn
 matplotlib
+nltk
+tldextract
