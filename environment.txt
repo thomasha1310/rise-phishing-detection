@@ -1,8 +1,7 @@
-python
+python>=3.13
 pandas
 ipykernel 
 numpy
-lime
 scikit-learn
 pytorch
 transformers
