@@ -1,5 +1,7 @@
 # PhishFence: Phishing Detection with Explainable AI
 
+## Introduction
+
 ## Data
 
 The data used to train our model is from [a large public dataset on Github](https://github.com/rokibulroni/Phishing-Email-Dataset). We used the following datasets:
