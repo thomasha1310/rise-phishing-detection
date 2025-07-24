@@ -38,6 +38,10 @@ In order to increase the training options available to us, we [augmented](https:
 
 The augmented data was exported as `emails_augmented.csv`.
 
+## Methods
+
+## Conclusions
+
 ## License
 
 This research project is licensed under the [MIT License](LICENSE).
