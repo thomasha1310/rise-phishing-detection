@@ -47,3 +47,7 @@ The augmented data was exported as `emails_augmented.csv`.
 ## License
 
 This research project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+We would like to thank our mentors Patrick Bloniasz, Dr. Eugene Pinsky, Tharunya Katikireddy, Tejovan Parker, Zhengyang Shan, and Kevin Quinn for their support and contributions to our project. We would also like to extend our gratitude to Boston University and the Research in Science and Engineering program for this opportunity.
