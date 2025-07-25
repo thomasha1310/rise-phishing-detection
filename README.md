@@ -1,39 +1,47 @@
 # PhishFence: Phishing Detection with Explainable AI
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
-[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
-## Introduction
+[![license](https://img.shields.io/badge/license-MIT_|_CC_BY--SA_4.0-blue)](LICENSE.md)
 
 ## Repository Structure
 
 ```
-rise-phishing-detection/
-├── data/
-│   ├── processing/
-│   │   ├── datasets/
-│   │   │   ├── CEAS_08.csv
-│   │   │   ├── Enron_New.csv
-│   │   │   ├── Enron.csv
-│   │   │   ├── fortune500.csv
-│   │   │   ├── Ling.csv
-│   │   │   ├── Nazario.csv
-│   │   │   ├── Nigerian_Fraud.csv
-│   │   │   ├── SpamAssasin.csv
-│   │   │   └── TREC_07.csv
-│   │   ├── Data_Augmentation.ipynb
-│   │   ├── Data_Preprocessing.ipynb
-│   │   └── Validate_Processor.ipynb
-│   ├── emails_augmented.csv
-│   ├── emails.csv
-│   └── validate.csv
+phishfence/
 ├── .gitattributes
 ├── .gitignore
-├── environment.txt
-├── LICENSE
+├── LICENSE.md
 ├── README.md
-├── main.py
-└── new.ipynb
+├── NOTICE.md
+├── environment.txt
+├── PhishFence.pdf
+├── data/
+│   ├── input/
+│   │   ├── CEAS_08.csv
+│   │   ├── Enron.csv
+│   │   ├── Ling.csv
+│   │   ├── Nazario.csv
+│   │   ├── Nigerian_Fraud.csv
+│   │   ├── SpamAssasin.csv
+│   │   ├── TREC_07.csv
+│   │   ├── fortune500.csv
+│   │   └── metadata/
+│   │       ├── sources.md
+│   │       └── codebooks.md
+│   └── analysis/
+│       ├── emails.csv
+│       ├── emails_augmented.csv
+│       ├── validate.csv
+│       └── data_appendix.md
+├── scripts/
+│   ├── processing/
+│   │   ├── preprocessing.py
+│   │   └── data_augmentation.py
+│   ├── analysis/
+│   │   └── Logistic_Regression.ipynb
+│   └── main.py
+└── output/
+    └── results/
+        └── ...
 ```
 
 ## Data
