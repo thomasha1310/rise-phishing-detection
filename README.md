@@ -46,14 +46,7 @@ phishfence/
 
 ## Data
 
-The data used to train our model is from [a large public dataset on Github](https://github.com/rokibulroni/Phishing-Email-Dataset). We used the following datasets:
-
-- `CEAS_08.csv`
-- `Enron.csv`
-- `Ling.csv`
-- `Nazario.csv`
-- `Nigerian_Fraud.csv`
-- `SpamAssasin.csv`
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/sources.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/sources.md).
 
 ### Pre-Processing
 
@@ -69,7 +62,7 @@ To prevent overfitting to the Enron corpus, we replaced all instances of the wor
 
 ### Data Augmentation
 
-In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/processing/Data_Augmentation.ipynb) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
+In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/rise-phishing-detection/blob/main/scripts/processing/data_augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
 
 - `num_urls`: the number of URLs present
 - `num_redirects`: the number of generic redirect links (i.e., bit.ly, tinyurl.com, etc.) present
@@ -88,7 +81,7 @@ The augmented data was exported as `emails_augmented.csv`.
 
 ## License
 
-This research project is licensed under the [MIT License](LICENSE).
+Please see our [LICENSE.md](LICENSE.md) file for more information.
 
 ## Acknowledgements
 
