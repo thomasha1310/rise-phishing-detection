@@ -34,4 +34,4 @@ SOFTWARE.
 
 ### Creative Commons License
 
-All other files, including (but not limited to) `.md` and `.png`, use the [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+All other files, including (but not limited to) `.md`, `.csv`, and `.png`, use the [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
