@@ -11,7 +11,6 @@ phishfence/
 ├── .gitignore
 ├── LICENSE.md
 ├── README.md
-├── NOTICE.md
 ├── environment.txt
 ├── PhishFence.pdf
 ├── data/
@@ -25,13 +24,13 @@ phishfence/
 │   │   ├── TREC_07.csv
 │   │   ├── fortune500.csv
 │   │   └── metadata/
-│   │       ├── sources.md
-│   │       └── codebooks.md
+│   │       ├── SOURCES.md
+│   │       └── CODEBOOKS.md
 │   └── analysis/
 │       ├── emails.csv
 │       ├── emails_augmented.csv
 │       ├── validate.csv
-│       └── data_appendix.md
+│       └── APPENDIX.md
 ├── scripts/
 │   ├── processing/
 │   │   ├── preprocessing.py
@@ -46,7 +45,7 @@ phishfence/
 
 ## Data
 
-We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/sources.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/sources.md).
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/sources.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/SOURCES.md).
 
 ### Pre-Processing
 
