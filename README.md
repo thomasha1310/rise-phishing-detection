@@ -45,7 +45,7 @@ phishfence/
 
 ## Data
 
-We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/sources.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/SOURCES.md).
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/SOURCES.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/SOURCES.md).
 
 ### Pre-Processing
 
