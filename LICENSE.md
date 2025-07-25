@@ -2,13 +2,11 @@ Copyright (c) 2025 Thomas Ha, Andrew Lee, and Connor Lee.
 
 ## Attribution
 
-All files contained within `phishfence/data/input/alam` are from the [Phishing Email Dataset](https://doi.org/10.34740/kaggle/ds/5074342) by Naser Abdullah Alam, licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
-
-
+All `.csv` files contained within `phishfence/data/input` are publicly available datasets. The original copyright holders are [credited](https://github.com/thomasha1310/phishfence/blob/main/data/input/metadata/sources.md). We take no credit for producing these datasets.
 
 ## Licenses
 
-All files in this repository are licensed under one of two licenses:
+With the exception of the files mentioned [above](#attribution), files in this repository are licensed under one of two licenses:
 
 ### MIT License
 
