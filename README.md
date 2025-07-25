@@ -2,6 +2,37 @@
 
 ## Introduction
 
+## Repository Structure
+
+```
+rise-phishing-detection/
+├── data/
+│   ├── processing/
+│   │   ├── datasets/
+│   │   │   ├── CEAS_08.csv
+│   │   │   ├── Enron_New.csv
+│   │   │   ├── Enron.csv
+│   │   │   ├── fortune500.csv
+│   │   │   ├── Ling.csv
+│   │   │   ├── Nazario.csv
+│   │   │   ├── Nigerian_Fraud.csv
+│   │   │   ├── SpamAssasin.csv
+│   │   │   └── TREC_07.csv
+│   │   ├── Data_Augmentation.ipynb
+│   │   ├── Data_Preprocessing.ipynb
+│   │   └── Validate_Processor.ipynb
+│   ├── emails_augmented.csv
+│   ├── emails.csv
+│   └── validate.csv
+├── .gitattributes
+├── .gitignore
+├── environment.txt
+├── LICENSE
+├── README.md
+├── main.py
+└── new.ipynb
+```
+
 ## Data
 
 The data used to train our model is from [a large public dataset on Github](https://github.com/rokibulroni/Phishing-Email-Dataset). We used the following datasets:
