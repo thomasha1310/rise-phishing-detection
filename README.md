@@ -1,51 +1,52 @@
 # PhishFence: Phishing Detection with Explainable AI
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
-[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
-## Introduction
+[![license](https://img.shields.io/badge/license-MIT_|_CC_BY--SA_4.0-blue)](LICENSE.md)
 
 ## Repository Structure
 
 ```
-rise-phishing-detection/
-├── data/
-│   ├── processing/
-│   │   ├── datasets/
-│   │   │   ├── CEAS_08.csv
-│   │   │   ├── Enron_New.csv
-│   │   │   ├── Enron.csv
-│   │   │   ├── fortune500.csv
-│   │   │   ├── Ling.csv
-│   │   │   ├── Nazario.csv
-│   │   │   ├── Nigerian_Fraud.csv
-│   │   │   ├── SpamAssasin.csv
-│   │   │   └── TREC_07.csv
-│   │   ├── Data_Augmentation.ipynb
-│   │   ├── Data_Preprocessing.ipynb
-│   │   └── Validate_Processor.ipynb
-│   ├── emails_augmented.csv
-│   ├── emails.csv
-│   └── validate.csv
+phishfence/
 ├── .gitattributes
 ├── .gitignore
-├── environment.txt
-├── LICENSE
+├── LICENSE.md
 ├── README.md
-├── main.py
-└── new.ipynb
+├── NOTICE.md
+├── environment.txt
+├── PhishFence.pdf
+├── data/
+│   ├── input/
+│   │   ├── CEAS_08.csv
+│   │   ├── Enron.csv
+│   │   ├── Ling.csv
+│   │   ├── Nazario.csv
+│   │   ├── Nigerian_Fraud.csv
+│   │   ├── SpamAssasin.csv
+│   │   ├── TREC_07.csv
+│   │   ├── fortune500.csv
+│   │   └── metadata/
+│   │       ├── sources.md
+│   │       └── codebooks.md
+│   └── analysis/
+│       ├── emails.csv
+│       ├── emails_augmented.csv
+│       ├── validate.csv
+│       └── data_appendix.md
+├── scripts/
+│   ├── processing/
+│   │   ├── preprocessing.py
+│   │   └── data_augmentation.py
+│   ├── analysis/
+│   │   └── Logistic_Regression.ipynb
+│   └── main.py
+└── output/
+    └── results/
+        └── ...
 ```
 
 ## Data
 
-The data used to train our model is from [a large public dataset on Github](https://github.com/rokibulroni/Phishing-Email-Dataset). We used the following datasets:
-
-- `CEAS_08.csv`
-- `Enron.csv`
-- `Ling.csv`
-- `Nazario.csv`
-- `Nigerian_Fraud.csv`
-- `SpamAssasin.csv`
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/sources.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/sources.md).
 
 ### Pre-Processing
 
@@ -61,7 +62,7 @@ To prevent overfitting to the Enron corpus, we replaced all instances of the wor
 
 ### Data Augmentation
 
-In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/processing/Data_Augmentation.ipynb) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
+In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/rise-phishing-detection/blob/main/scripts/processing/data_augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
 
 - `num_urls`: the number of URLs present
 - `num_redirects`: the number of generic redirect links (i.e., bit.ly, tinyurl.com, etc.) present
@@ -80,7 +81,7 @@ The augmented data was exported as `emails_augmented.csv`.
 
 ## License
 
-This research project is licensed under the [MIT License](LICENSE).
+Please see our [LICENSE.md](LICENSE.md) file for more information.
 
 ## Acknowledgements
 
