@@ -1,3 +1,5 @@
+# License
+
 Copyright (c) 2025 Thomas Ha, Andrew Lee, and Connor Lee.
 
 ## Attribution
