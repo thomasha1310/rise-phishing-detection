@@ -1,7 +1,7 @@
 # PhishFence: Phishing Detection with Explainable AI
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
-[![license](https://img.shields.io/badge/license-MIT_|_CC_BY--SA_4.0-blue)](LICENSE.md)
+[![license](https://img.shields.io/badge/license-MIT_/_CC_BY--SA_4.0-blue)](LICENSE.md)
 
 ## Repository Structure
 
