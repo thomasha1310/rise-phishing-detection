@@ -3,6 +3,14 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange)](https://lifecycle.r-lib.org/articles/stages.html)
 [![license](https://img.shields.io/badge/license-MIT_/_CC_BY--SA_4.0-blue)](LICENSE.md)
 
+## Abstract
+
+Phishing attacks remain a prevalent and financially damaging threat in digital communications, affecting both vulnerable individuals and large companies and corporations. Attacks are increasingly leveraging obfuscation techniques to deceive end-users and evade traditional spam filters. Furthermore, conventional “black box” phishing detection techniques fail to provide clear explanations to end-users regarding classification decisions, resulting in poor transparency and trust.
+
+We present **PhishFence**, a phishing email detection method that combines probabilistic classification models with explainable artificial intelligence (XAI) techniques to enhance both phishing detection accuracy and interpretability. We utilize six free and publicly available phishing email datasets and combine them to form a large dataset, representing a diverse sample of phishing emails. We evaluate a variety of probabilistic machine learning classifiers for accuracy and several other metrics, determining that the best models achieve a similar accuracy compared to leading phishing detection models.
+
+When applied to a completely new validation dataset and a handful of anonymized real-world sample emails, PhishFence achieved similarly high results, indicating robustness against overfitting. This analysis demonstrates the effectiveness of pairing explainable AI with probabilistic machine learning classifiers for warning users of potentially harmful emails.
+
 ## Repository Structure
 
 ```
@@ -45,7 +53,7 @@ phishfence/
 
 ## Data
 
-We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/SOURCES.md`](https://github.com/thomasha1310/rise-phishing-detection/blob/main/data/input/metadata/SOURCES.md).
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/SOURCES.md`](https://github.com/thomasha1310/phishfence/blob/main/data/input/metadata/SOURCES.md).
 
 ### Pre-Processing
 
@@ -61,7 +69,7 @@ To prevent overfitting to the Enron corpus, we replaced all instances of the wor
 
 ### Data Augmentation
 
-In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/rise-phishing-detection/blob/main/scripts/processing/data_augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
+In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/phishfence/blob/main/scripts/processing/augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
 
 - `num_urls`: the number of URLs present
 - `num_redirects`: the number of generic redirect links (i.e., bit.ly, tinyurl.com, etc.) present
