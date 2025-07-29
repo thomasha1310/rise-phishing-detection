@@ -10,17 +10,18 @@ from nltk.corpus import stopwords
 
 # ========== NLTK INITIALIZATION ==========
 
+print("Preparing NLTK...")
 nltk.download('punkt', download_dir='nltk_data')
 nltk.download('punkt_tab', download_dir='nltk_data')
 nltk.download('wordnet', download_dir='nltk_data')
 nltk.download('omw-1.4', download_dir='nltk_data')
 nltk.download('stopwords', download_dir='nltk_data')
 nltk.data.path.append('./nltk_data')
-
 lemmatizer = WordNetLemmatizer()
 
 # ========== READ DATA ==========
 
+print("Reading data...")
 df = pd.read_csv('./data/analysis/emails.csv')
 
 # ========== CONSTANTS ==========
@@ -69,6 +70,9 @@ def count_urgent_words(text):
     tokens = word_tokenize(str(text).lower())
     lemmas = [lemmatizer.lemmatize(word) for word in tokens]
     return sum(1 for word in lemmas if word in URGENT_KEYWORDS)
+
+
+print("Processing data...")
 
 # ========== TOTAL URLS ==========
 
@@ -131,4 +135,6 @@ df['body_no_stopwords'] = df['body'].apply(
 
 # ========== EXPORT DATA ==========
 
+print("Exporting data...")
 df.to_csv('./data/analysis/emails_augmented.csv', index=False)
+print("Done.")
