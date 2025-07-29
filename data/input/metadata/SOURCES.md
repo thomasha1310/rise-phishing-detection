@@ -14,7 +14,7 @@ Accessed 17 July 2025.
 
 ### `fortune500.csv`
 
-> Clark, A. *Analyses of Top US Companies*. GitHub. https://github.com/pssguy/fortune500 (accessed 2025-07-25).
+> Clark, A. *Analyses of Top US Companies*. GitHub. https://github.com/pssguy/fortune500 (accessed 2025-07-22).
 
 Accessed 22 July 2025.
 
