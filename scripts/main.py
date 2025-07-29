@@ -10,8 +10,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 
-import lime
-import lime.lime_text
 from sklearn.pipeline import make_pipeline
 
 # ========== 1. Load Dataset ==========
@@ -61,24 +59,6 @@ for word, coef in zip(feature_names[top_phishing_idx], coefs[top_phishing_idx]):
 print("\nTop indicative words for legitimate:")
 for word, coef in zip(feature_names[top_legit_idx], coefs[top_legit_idx]):
     print(f"{word}: {coef:.4f}")
-
-# ========== 7. Local Explanation with LIME ==========
-# LIME needs raw text and a pipeline
-raw_X_train, raw_X_test = train_test_split(df['clean_email'], test_size=0.2, random_state=42)
-
-pipeline = make_pipeline(vectorizer, model)
-explainer = lime.lime_text.LimeTextExplainer(class_names=['Legitimate', 'Phishing'])
-
-# Pick a test email to explain
-idx = 0
-print("\nExplaining instance:", raw_X_test.iloc[idx])
-exp = explainer.explain_instance(raw_X_test.iloc[idx], pipeline.predict_proba, num_features=10)
-
-# Save as HTML
-import os
-output_dir = './generated'
-os.makedirs(output_dir, exist_ok=True)
-exp.save_to_file(os.path.join(output_dir, 'lime_explanation.html'))
 
 # ========== 8. Save Model (Optional) ==========
 import joblib
