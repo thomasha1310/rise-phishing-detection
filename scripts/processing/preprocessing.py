@@ -41,6 +41,7 @@ df_ling = pd.read_csv('./data/inputs/Ling.csv')
 df_nazario = pd.read_csv('./data/inputs/Nazario.csv')
 df_nigerian = pd.read_csv('./data/inputs/Nigerian_Fraud.csv')
 df_assassin = pd.read_csv('./data/inputs/SpamAssasin.csv')
+df_trec = pd.read_csv('./datasets/TREC_07.csv')
 
 # ========== DATASET INFO ==========
 
@@ -56,6 +57,8 @@ print('=============== NIGERIAN ===============')
 df_nigerian.info()
 print('=============== ASSASSIN ===============')
 df_assassin.info()
+print('=============== TREC_07  ===============')
+df_trec.info()
 
 # ========== TRIM COLUMNS ==========
 
@@ -65,6 +68,7 @@ df_trimmed_ling = df_ling[['subject', 'body', 'label']]
 df_trimmed_nazario = df_nazario[['subject', 'body', 'label']]
 df_trimmed_nigerian = df_nigerian[['subject', 'body', 'label']]
 df_trimmed_assassin = df_assassin[['subject', 'body', 'label']]
+df_trimmed_trec = df_trec[['subject', 'body', 'label']].copy()
 
 print('=============== CEAS 08  ===============')
 df_trimmed_ceas.info()
@@ -99,11 +103,17 @@ df_complete.dropna(inplace=True)
 df_complete.drop_duplicates(inplace=True)
 df_complete.info()
 
+df_trec.dropna(inplace=True)
+df_trec.drop_duplicates(inplace=True)
+df_trec.info()
+
 # ========== COUNT PHISHING/LEGITIMATE ==========
 
 print(df_complete['label'].value_counts())
 print(df_trimmed_enron['label'].value_counts())
+print(df_trimmed_trec['label'].value_counts())
 
 # ========== EXPORT DATA ==========
 
 df_complete.to_csv('./data/analysis/emails.csv', index=False)
+df_trimmed_trec.to_csv('./data/analysis/validate.csv', index=False)
