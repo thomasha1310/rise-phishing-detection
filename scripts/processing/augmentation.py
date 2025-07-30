@@ -28,12 +28,6 @@ df = pd.read_csv('./data/analysis/emails.csv')
 
 URL_PATTERN = r'https?:\/\/[^\s<>"]+|[^\s<>"]+\.[A-Za-z]{1,2}[^\s<>"]+'
 
-GENERAL_REDIRECTS = {
-    'bit.ly', 'tinyurl.com', 'ow.ly', 'rebrand.ly', 'is.gd',
-    'buff.ly', 'adf.ly', 'shorte.st', 'cutt.ly', 'clk.im',
-    'yellkey.com', 'v.gd'
-}
-
 URGENT_KEYWORDS = {
     'urgent', 'immediately', 'important', 'action', 'required', 'asap',
     'alert', 'verify', 'warning', 'account', 'suspend', 'suspended',
@@ -79,17 +73,6 @@ print("Processing data...")
 print("Counting URLs...")
 df['num_urls'] = df.apply(
     lambda row: count_urls(row['subject']) + count_urls(row['body']),
-    axis=1
-)
-
-# ========== REDIRECTS ==========
-
-print("Counting redirects...")
-df['num_redirects'] = df.apply(
-    lambda row: sum(
-        1 for url in extract_urls(str(row['subject']) + ' ' + str(row['body']))
-        if (lambda ext: f"{ext.domain}.{ext.suffix}")(tldextract.extract(url)) in GENERAL_REDIRECTS
-    ),
     axis=1
 )
 
