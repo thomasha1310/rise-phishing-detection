@@ -62,7 +62,7 @@ All duplicate rows and rows with missing values were removed, and the dataset wa
 
 ### Handling the Enron Corpus
 
-After initial testing, we determined that the Enron corpus, consisting of 29,767 emails, comprised an overly large proportion (roughly 36%) of the total dataset. In particular, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
+After initial testing, we determined that the Enron corpus (29,767 emails) comprised an overly large proportion (roughly 36%) of the total dataset. In particular, when using LIME to explain model behaviors, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
 
 To prevent overfitting to the Enron corpus, we replaced all instances of the word "Enron" in the `Enron.csv` with a randomly selected company from the Fortune 500 list of companies before recompiling the full dataset.
 
