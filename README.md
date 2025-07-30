@@ -14,41 +14,40 @@ When applied to a completely new validation dataset and a handful of anonymized 
 ## Repository Structure
 
 ```
-phishfence/
-├── .gitattributes
-├── .gitignore
-├── LICENSE.md
-├── README.md
-├── environment.txt
-├── PhishFence.pdf
-├── data/
-│   ├── input/
-│   │   ├── CEAS_08.csv
-│   │   ├── Enron.csv
-│   │   ├── Ling.csv
-│   │   ├── Nazario.csv
-│   │   ├── Nigerian_Fraud.csv
-│   │   ├── SpamAssasin.csv
-│   │   ├── TREC_07.csv
-│   │   ├── fortune500.csv
-│   │   └── metadata/
-│   │       ├── SOURCES.md
-│   │       └── CODEBOOKS.md
-│   └── analysis/
-│       ├── emails.csv
-│       ├── emails_augmented.csv
-│       ├── validate.csv
-│       └── APPENDIX.md
-├── scripts/
-│   ├── processing/
-│   │   ├── preprocessing.py
-│   │   └── data_augmentation.py
-│   ├── analysis/
-│   │   └── Logistic_Regression.ipynb
-│   └── main.py
-└── output/
-    └── results/
-        └── ...
+phishfence
+├─ .gitattributes
+├─ .gitignore
+├─ LICENSE.md
+├─ README.md
+├─ data/
+│  ├─ analysis/
+│  │  ├─ APPENDIX.md
+│  │  ├─ emails.csv
+│  │  ├─ emails_augmented.csv
+│  │  └─ validate.csv
+│  └─ input/
+│     ├─ CEAS_08.csv
+│     ├─ Enron.csv
+│     ├─ Ling.csv
+│     ├─ Nazario.csv
+│     ├─ Nigerian_Fraud.csv
+│     ├─ SpamAssasin.csv
+│     ├─ TREC_07.csv
+│     ├─ fortune500.csv
+│     └─ metadata/
+│        ├─ CODEBOOKS.md
+│        └─ SOURCES.md
+├─ environment.txt
+├─ output/
+│  ├─ appendix/...
+│  ├─ models/...
+│  └─ results/...
+└─ scripts/
+   ├─ analysis/...
+   ├─ appendix/...
+   ├─ processing/...
+   ├─ new.ipynb
+   └─ main.py
 ```
 
 ## Data
