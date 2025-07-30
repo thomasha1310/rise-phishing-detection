@@ -120,7 +120,7 @@ print("Compiling no-stopwords column...")
 df['body_no_stopwords'] = df['body'].apply(
     lambda row: ' '.join(
         word for word in word_tokenize(str(row).lower())
-        if word.isalnum() and word not in STOP_WORDS
+        if word.isalnum() and not word.isnumeric() and word not in STOP_WORDS
     )
 )
 
