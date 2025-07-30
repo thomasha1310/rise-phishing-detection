@@ -63,16 +63,15 @@ All duplicate rows and rows with missing values were removed, and the dataset wa
 
 ### Handling the Enron Corpus
 
-After initial testing, we determined that the Enron corpus, consisting of 29,767 emails, comprised too large of a proportion (roughly 36%) of the total dataset. In particular, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
+After initial testing, we determined that the Enron corpus, consisting of 29,767 emails, comprised an overly large proportion (roughly 36%) of the total dataset. In particular, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
 
 To prevent overfitting to the Enron corpus, we replaced all instances of the word "Enron" in the `Enron.csv` with a randomly selected company from the Fortune 500 list of companies before recompiling the full dataset.
 
 ### Data Augmentation
 
-In order to increase the training options available to us, we [augmented](https://github.com/thomasha1310/phishfence/blob/main/scripts/processing/augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
+To increase the training options available to us, we [augmented](https://github.com/thomasha1310/phishfence/blob/main/scripts/processing/augmentation.py) the initial dataset (`emails.csv`) by adding additional columns. These columns are:
 
 - `num_urls`: the number of URLs present
-- `num_redirects`: the number of generic redirect links (i.e., bit.ly, tinyurl.com, etc.) present
 - `num_words`: the number of words present in the email body
 - `num_chars_foreign`: the number of characters not present in ASCII
 - `num_chars_special`: the number of non-alphanumeric or space characters
@@ -92,4 +91,4 @@ Please see our [LICENSE.md](https://github.com/thomasha1310/phishfence/blob/main
 
 ## Acknowledgements
 
-We would like to thank our mentors Patrick Bloniasz, Dr. Eugene Pinsky, Tharunya Katikireddy, Tejovan Parker, Zhengyang Shan, and Kevin Quinn for their support and contributions to our project. We would also like to extend our gratitude to Boston University and the Research in Science and Engineering program for this opportunity.
+We would like to thank our mentors, Patrick Bloniasz, Dr. Eugene Pinsky, Tharunya Katikireddy, Tejovan Parker, Zhengyang Shan, and Kevin Quinn, for their support and contributions to our project. We would also like to extend our gratitude to Boston University and the Research in Science and Engineering program for this opportunity.
