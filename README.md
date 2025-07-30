@@ -37,7 +37,7 @@ phishfence
 │     └─ metadata/
 │        ├─ CODEBOOKS.md
 │        └─ SOURCES.md
-├─ environment.txt
+├─ environment.yml
 ├─ output/
 │  ├─ appendix/...
 │  ├─ models/...
