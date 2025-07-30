@@ -30,7 +30,7 @@ The `subject`, `body`, and `label` fields are identical to those in `emails.csv`
 
 This field (`int` datatype) is an indication of the number of URLs that an email contains. A URL is defined as any string matching the following regular expression:
 ```regex
-https?:\/\/[^\s<>"]+|www\.[^\s<>"]+
+https?:\/\/[^\s<>"]+|[^\s<>"]+\.[A-Za-z]{1,2}[^\s<>"]+
 ```
 
 ### `num_redirects`
