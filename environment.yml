@@ -1,4 +1,4 @@
-name: phishfence_env
+name: phishfence
 channels:
   - conda-forge
 dependencies:
