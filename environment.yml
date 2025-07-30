@@ -1,0 +1,17 @@
+name: phishfence_env
+channels:
+  - conda-forge
+dependencies:
+  - python >=3.13,<3.14
+  - pandas
+  - ipykernel
+  - numpy
+  - scikit-learn
+  - pytorch
+  - transformers
+  - seaborn
+  - matplotlib
+  - nltk
+  - tldextract
+  - tabulate
+  - shap
