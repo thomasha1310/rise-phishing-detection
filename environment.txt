@@ -10,3 +10,4 @@ matplotlib
 nltk
 tldextract
 seaborn
+tabulate
