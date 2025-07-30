@@ -26,7 +26,7 @@ df = pd.read_csv('./data/analysis/emails.csv')
 
 # ========== CONSTANTS ==========
 
-URL_PATTERN = r'https?:\/\/[^\s<>"]+|www\.[^\s<>"]+'
+URL_PATTERN = r'https?:\/\/[^\s<>"]+|[^\s<>"]+\.[A-Za-z]{1,2}[^\s<>"]+'
 
 GENERAL_REDIRECTS = {
     'bit.ly', 'tinyurl.com', 'ow.ly', 'rebrand.ly', 'is.gd',
@@ -76,6 +76,7 @@ print("Processing data...")
 
 # ========== TOTAL URLS ==========
 
+print("Counting URLs...")
 df['num_urls'] = df.apply(
     lambda row: count_urls(row['subject']) + count_urls(row['body']),
     axis=1
@@ -83,6 +84,7 @@ df['num_urls'] = df.apply(
 
 # ========== REDIRECTS ==========
 
+print("Counting redirects...")
 df['num_redirects'] = df.apply(
     lambda row: sum(
         1 for url in extract_urls(str(row['subject']) + ' ' + str(row['body']))
@@ -93,13 +95,15 @@ df['num_redirects'] = df.apply(
 
 # ========== WORD COUNT ==========
 
+print("Counting words...")
 df['num_words'] = df.apply(
     lambda row: len(str(row['body']).split()),
     axis=1
 )
 
-# ========== NON-LATIN CHARS ==========
+# ========== NON-ASCII CHARS ==========
 
+print("Counting non-ASCII characters...")
 df['num_chars_foreign'] = df.apply(
     lambda row: sum(1 for char in str(row['body']) if not char.isascii()),
     axis=1
@@ -107,6 +111,7 @@ df['num_chars_foreign'] = df.apply(
 
 # ========== SPECIAL CHARS ==========
 
+print("Counting special characters...")
 df['num_chars_special'] = df.apply(
     lambda row: sum(1 for char in str(row['body']) if not char.isalnum() and not char.isspace()),
     axis=1
@@ -114,10 +119,12 @@ df['num_chars_special'] = df.apply(
 
 # ========== URGENCY ==========
 
+print("Counting urgent words...")
 df['num_urgent_words'] = df['body'].apply(count_urgent_words)
 
 # ========== STOPWORDS COUNT ==========
 
+print("Counting stopwords...")
 df['num_stopwords'] = df['body'].apply(
     lambda row: sum(
         1 for word in word_tokenize(str(row).lower()) if word in STOP_WORDS
@@ -126,6 +133,7 @@ df['num_stopwords'] = df['body'].apply(
 
 # ========== NO STOPWORDS COLUMN ==========
 
+print("Compiling no-stopwords column...")
 df['body_no_stopwords'] = df['body'].apply(
     lambda row: ' '.join(
         word for word in word_tokenize(str(row).lower())
