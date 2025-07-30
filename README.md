@@ -37,7 +37,7 @@ phishfence
 │     └─ metadata/
 │        ├─ CODEBOOKS.md
 │        └─ SOURCES.md
-├─ environment.txt
+├─ environment.yml
 ├─ output/
 │  ├─ appendix/...
 │  ├─ models/...
@@ -62,7 +62,7 @@ All duplicate rows and rows with missing values were removed, and the dataset wa
 
 ### Handling the Enron Corpus
 
-After initial testing, we determined that the Enron corpus, consisting of 29,767 emails, comprised an overly large proportion (roughly 36%) of the total dataset. In particular, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
+After initial testing, we determined that the Enron corpus (29,767 emails) comprised an overly large proportion (roughly 36%) of the total dataset. In particular, when using LIME to explain model behaviors, the word "Enron" consistently appeared as the top indicative word for legitimate emails, with a score of -11.0770.
 
 To prevent overfitting to the Enron corpus, we replaced all instances of the word "Enron" in the `Enron.csv` with a randomly selected company from the Fortune 500 list of companies before recompiling the full dataset.
 
@@ -86,8 +86,8 @@ The augmented data was exported as `emails_augmented.csv`.
 
 ## License
 
-Please see our [LICENSE.md](https://github.com/thomasha1310/phishfence/blob/main/LICENSE.md) file for more information.
+Please visit our [license](https://github.com/thomasha1310/phishfence/blob/main/LICENSE.md) file for more information.
 
 ## Acknowledgements
 
-We would like to thank our mentors, Patrick Bloniasz, Dr. Eugene Pinsky, Tharunya Katikireddy, Tejovan Parker, Zhengyang Shan, and Kevin Quinn, for their support and contributions to our project. We would also like to extend our gratitude to Boston University and the Research in Science and Engineering program for this opportunity.
+We would like to thank our mentors, [Patrick Bloniasz](https://github.com/bloniaszp), [Dr. Eugene Pinsky](https://www.bu.edu/met/profile/eugene-pinsky/), Tharunya Katikireddy, [Tejovan Parker](https://www.tejovanparker.com/), [Zhengyang Shan](https://github.com/ZhengyangShan), and [Kevin Quinn](https://github.com/kevinqnb), for their support and contributions to our project. We would also like to extend our gratitude to [Boston University](https://www.bu.edu/) and the [BU RISE](https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/) program for this opportunity.
