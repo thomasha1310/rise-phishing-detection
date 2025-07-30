@@ -33,26 +33,25 @@ This field (`int` datatype) is an indication of the number of URLs that an email
 https?:\/\/[^\s<>"]+|[^\s<>"]+\.[A-Za-z]{1,2}[^\s<>"]+
 ```
 
-### `num_redirects`
-
-This field (`int` datatype) is an indication of the number of redirects that an email contains. A redirect is defined as a URL beginning with one of the following:
-```python
-'bit.ly', 'tinyurl.com', 'ow.ly', 'rebrand.ly', 'is.gd',
-'buff.ly', 'adf.ly', 'shorte.st', 'cutt.ly', 'clk.im',
-'yellkey.com', 'v.gd'
-```
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3f307b46-ef4d-4576-ad58-2321807b7762" />
 
 ### `num_words`
 
 This field (`int` datatype) is an indication of the number of words in an email body. This is obtained by counting the number of strings after splitting the `body` field on all whitespace characters (discarding empty strings).
 
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/f4c520b9-2f1f-4c61-9579-8100946ed65d" />
+
 ### `num_chars_foreign`
 
 This field (`int` datatype) is an indication of the number of non-ASCII characters in an email body, defined using the Python built-in `isascii()` method.
 
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/a4b3a00a-2d3c-459a-9f10-17e7ab65c532" />
+
 ### `num_chars_special`
 
 This field (`int` datatype) is an indication of the number of special characters in an email body, defined as fulfilling neither the `isalnum()` nor the `isspace()` Python built-in methods.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3726b6c4-41dd-4d56-adaa-add2dd301457" />
 
 ### `num_urgent_words`
 
@@ -70,9 +69,13 @@ This field (`int` datatype) is an indication of the number of urgent words in an
 'dispute', 'settlement', 'penalty', 'compliance', 'legal', 'violation'
 ```
 
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/7d515311-601e-4f8b-8b1e-8c78c5f5b50b" />
+
 ### `num_stopwords`
 
 This field (`int` datatype) is an indication of the number of stopwords in an email body. The email body is tokenized using NLTK, and the resulting words are matched against an NLTK corpus of predefined English stopwords.
+
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/46a4993d-f1c0-4891-b5cf-30be9ab87a0d" />
 
 ### `body_no_stopwords`
 
