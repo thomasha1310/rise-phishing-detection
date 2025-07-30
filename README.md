@@ -86,7 +86,7 @@ The augmented data was exported as `emails_augmented.csv`.
 
 ## License
 
-Please see our [LICENSE.md](https://github.com/thomasha1310/phishfence/blob/main/LICENSE.md) file for more information.
+Please visit our [license](https://github.com/thomasha1310/phishfence/blob/main/LICENSE.md) file for more information.
 
 ## Acknowledgements
 
