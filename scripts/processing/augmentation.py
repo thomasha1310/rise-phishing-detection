@@ -123,10 +123,10 @@ df['body_no_stopwords'] = df['body'].apply(
         if word.isalnum() and not word.isnumeric() and word not in STOP_WORDS
     )
 )
-df.dropna(inplace=True)
 
 # ========== EXPORT DATA ==========
 
+df.dropna(inplace=True)
 print("Exporting data...")
 df.to_csv('./data/analysis/emails_augmented.csv', index=False)
 print("Done.")
