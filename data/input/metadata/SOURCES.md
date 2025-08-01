@@ -36,7 +36,7 @@ Accessed 17 July 2025.
 
 Accessed 17 July 2025.
 
-### `SpamAssasin.csv`
+### `SpamAssassin.csv`
 
 > Al-Subaiey, A.; Al-Thani, M.; Alam, N. A.; Antora, K. F.; Khandakar, A.; Zaman, S. A. U. Novel Interpretable and Robust Web-Based AI Platform for Phishing Email Detection. _Computers & Electrical Engineering_ **2024**, _120_ (A). https://doi.org/10.1016/j.compeleceng.2024.109625.
 
