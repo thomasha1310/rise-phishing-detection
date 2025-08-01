@@ -11,3 +11,4 @@ nltk
 tldextract
 seaborn
 shap
+sentence-transformers
