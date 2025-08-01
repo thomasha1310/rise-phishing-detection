@@ -31,8 +31,7 @@ phishfence
 │     ├─ Ling.csv
 │     ├─ Nazario.csv
 │     ├─ Nigerian_Fraud.csv
-│     ├─ SpamAssasin.csv
-│     ├─ TREC_07.csv
+│     ├─ SpamAssassin.csv
 │     ├─ fortune500.csv
 │     └─ metadata/
 │        ├─ CODEBOOKS.md

@@ -15,4 +15,8 @@ dependencies:
   - tldextract
   - tabulate
   - shap
+<<<<<<< HEAD
   - sentence-transformers
+=======
+  - python-dotenv
+>>>>>>> 7560befc31d083a3f93f9c7066f4167e840d4ce3
