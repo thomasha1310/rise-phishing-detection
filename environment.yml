@@ -17,4 +17,4 @@ dependencies:
   - shap
   - sentence-transformers
   - python-dotenv
-  
+  - openai
