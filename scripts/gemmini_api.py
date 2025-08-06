@@ -42,14 +42,39 @@ def explain_phishing(text: str) -> str:
 
 # --- Example usage ---
 if __name__ == "__main__":
-    sample_text = """The ultimate convenience store in drugs, brought to you in just one click!
-Select from thousands of prescr. drugs to be delivered right to your doorstep.
-- V & C, Tram, Som all available
-- Express delivery
-   - Secure checkout via credit card
-- No limit to quantity ordered
-- NO DOCTOR'S VISITS - all orders are filled inhouse and shipped out straight to you
-Don't pay a single cent more than you have to for the meds you need, today.
-Click here: www.outgoeffmedical.com"""
+    sample_text = """Quick Quiz - What is the hottest thing in Costa Rica
+
+Answer - the real estate market
+
+You have got to check out this view!!!!
+
+
+
+http://www.campaignmccain.net/quick_quiz/reserva.html
+
+
+
+
+
+To decline from future promotions of this offer,
+see the following:
+http://www.campaignmccain.net/quick_quiz/unsb.html
+
+or mail:
+
+Costa Reserva
+421 Leroy Drive
+Corona, CA 92879
+kZcPLdYZaYW_bCWULGaeJQW\\8fXIc[XYcS9UC
+
+
+
+
+DesertDeals is proud to being you hand selected offerings. 
+However, to be excluded please visit 
+http://www.campaignmccain.net/unsub.jsp?=producttestpanel@gvc.ceas-challenge.cc
+or write us at ADOBE ONE 40 E Chicago Avenue #240 Chicago, IL 
+60611
+"""
     explanation = explain_phishing(sample_text)
     print("Explanation:\n", explanation)
