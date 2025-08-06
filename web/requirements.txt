@@ -5,3 +5,4 @@ shap
 numpy
 pandas
 python-dotenv
+google-genai
