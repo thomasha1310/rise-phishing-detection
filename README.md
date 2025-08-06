@@ -79,9 +79,25 @@ To increase the training options available to us, we [augmented](https://github.
 
 The augmented data was exported as `emails_augmented.csv`.
 
-## Methods
+## Installation & Usage
 
-## Conclusions
+Clone the repository:
+```
+git clone https://github.com/thomasha1310/phishfence.git
+cd phishfence
+```
+
+### Web Application
+
+Install dependencies with pip:
+```
+pip install -r web/requirements.txt
+```
+
+Activate the Flask server:
+```
+python web/app.py
+```
 
 ## License
 
