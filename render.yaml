@@ -2,6 +2,6 @@ services:
   - type: web
     name: phishfence
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python phishfence/web/app.py
+    buildCommand: pip install -r ./web/requirements.txt
+    startCommand: python ./web/app.py
     autoDeploy: true

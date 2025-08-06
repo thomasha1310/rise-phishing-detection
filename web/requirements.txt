@@ -1,0 +1,7 @@
+flask
+markupsafe
+joblib
+shap
+numpy
+pandas
+python-dotenv

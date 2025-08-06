@@ -9,12 +9,12 @@ import re
 app = Flask(__name__)
 
 # 1) Load your sklearn pipeline
-model      = joblib.load("spam_detector.joblib")
+model      = joblib.load("./output/models/LogisticRegression_tfidf.joblib")
 vectorizer = model.named_steps['vectorizer']   # or 'vectorizer'
 classifier = model.named_steps['classifier']
 
 # 2) Build a small numeric background for KernelExplainer
-df = pd.read_csv("emails_augmented.csv")
+df = pd.read_csv("./data/analysis/emails_augmented.csv")
 assert 'body_no_stopwords' in df.columns and 'label' in df.columns
 
 texts  = df['body_no_stopwords'].tolist()
