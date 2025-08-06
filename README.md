@@ -19,34 +19,32 @@ phishfence
 ├─ .gitignore
 ├─ LICENSE.md
 ├─ README.md
+├─ environment.yml
 ├─ data/
 │  ├─ analysis/
 │  │  ├─ APPENDIX.md
-│  │  ├─ emails.csv
-│  │  ├─ emails_augmented.csv
-│  │  └─ validate.csv
+│  │  └─ ...
 │  └─ input/
-│     ├─ CEAS_08.csv
-│     ├─ Enron.csv
-│     ├─ Ling.csv
-│     ├─ Nazario.csv
-│     ├─ Nigerian_Fraud.csv
-│     ├─ SpamAssassin.csv
-│     ├─ fortune500.csv
-│     └─ metadata/
-│        ├─ CODEBOOKS.md
-│        └─ SOURCES.md
-├─ environment.yml
+│     ├─ SOURCES.md
+│     └─ ...
 ├─ output/
 │  ├─ appendix/...
-│  ├─ models/...
+│  ├─ embeddings/...
+│  ├─ models/
+│  │  ├─ phishing-bert-model/...
+│  │  └─ ...
 │  └─ results/...
-└─ scripts/
-   ├─ analysis/...
-   ├─ appendix/...
-   ├─ processing/...
-   ├─ new.ipynb
-   └─ main.py
+├─ scripts/
+│  ├─ analysis/...
+│  ├─ appendix/...
+│  ├─ processing/...
+│  ├─ new.ipynb
+│  └─ main.py
+└─ web/
+   ├─ static/style.css
+   ├─ templates/index.html
+   ├─ requirements.txt
+   └─ app.py
 ```
 
 ## Data
@@ -92,6 +90,11 @@ cd phishfence
 Install dependencies with pip:
 ```
 pip install -r web/requirements.txt
+```
+
+Create a `.env` file in `phishfence/` with your Gemini API key:
+```
+GEMINI_API_KEY="<YOUR API KEY HERE>"
 ```
 
 Activate the Flask server:
