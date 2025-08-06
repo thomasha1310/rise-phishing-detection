@@ -18,3 +18,4 @@ dependencies:
   - sentence-transformers
   - python-dotenv
   - openai
+  -typing_extensions
