@@ -88,9 +88,10 @@ cd phishfence
 
 ### Web Application
 
-Install dependencies with pip:
+Install dependencies with Mamba:
 ```
-pip install -r web/requirements.txt
+mamba create --file ./web/environment.yml
+mamba activate phishfence-web
 ```
 
 Create a `.env` file in `phishfence/` with your Gemini API key:
