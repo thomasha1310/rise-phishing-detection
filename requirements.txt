@@ -1,0 +1,16 @@
+python
+pandas
+ipykernel
+numpy
+scikit-learn
+torch
+transformers
+seaborn
+matplotlib
+nltk
+tldextract
+tabulate
+shap
+sentence-transformers
+python-dotenv
+openai
