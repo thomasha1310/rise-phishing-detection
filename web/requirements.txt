@@ -1,8 +1,8 @@
 flask
 markupsafe
-joblib
+torch
 shap
 numpy
-pandas
+transformers
 python-dotenv
 google-genai
