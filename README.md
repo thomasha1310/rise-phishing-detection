@@ -15,6 +15,7 @@ The BERT-based model achieves 99.3% accuracy, outperforming the other four model
 
 ```
 phishfence
+├─ (.env)
 ├─ .gitattributes
 ├─ .gitignore
 ├─ LICENSE.md
