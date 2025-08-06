@@ -50,7 +50,7 @@ phishfence
 
 ## Data
 
-We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/SOURCES.md`](https://github.com/thomasha1310/phishfence/blob/main/data/input/metadata/SOURCES.md).
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/SOURCES.md`](https://github.com/thomasha1310/phishfence/blob/main/data/input/SOURCES.md).
 
 ### Pre-Processing
 
