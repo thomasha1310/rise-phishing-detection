@@ -51,6 +51,7 @@ def highlight_text(email, shap_values, top_n=5):
 app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"])
+
 def index():
     result = confidence = alert_class = highlighted_email = None
     email_text = ""
@@ -83,3 +84,4 @@ def index():
 
 if __name__=="__main__":
     app.run(debug=True)
+    

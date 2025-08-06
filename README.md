@@ -15,43 +15,42 @@ The BERT-based model achieves 99.3% accuracy, outperforming the other four model
 
 ```
 phishfence
+├─ (.env)
 ├─ .gitattributes
 ├─ .gitignore
 ├─ LICENSE.md
 ├─ README.md
+├─ environment.yml
 ├─ data/
 │  ├─ analysis/
 │  │  ├─ APPENDIX.md
-│  │  ├─ emails.csv
-│  │  ├─ emails_augmented.csv
-│  │  └─ validate.csv
+│  │  └─ ...
 │  └─ input/
-│     ├─ CEAS_08.csv
-│     ├─ Enron.csv
-│     ├─ Ling.csv
-│     ├─ Nazario.csv
-│     ├─ Nigerian_Fraud.csv
-│     ├─ SpamAssassin.csv
-│     ├─ fortune500.csv
-│     └─ metadata/
-│        ├─ CODEBOOKS.md
-│        └─ SOURCES.md
-├─ environment.yml
+│     ├─ SOURCES.md
+│     └─ ...
 ├─ output/
 │  ├─ appendix/...
-│  ├─ models/...
+│  ├─ embeddings/...
+│  ├─ models/
+│  │  ├─ phishing-bert-model/...
+│  │  └─ ...
 │  └─ results/...
-└─ scripts/
-   ├─ analysis/...
-   ├─ appendix/...
-   ├─ processing/...
-   ├─ new.ipynb
-   └─ main.py
+├─ scripts/
+│  ├─ analysis/...
+│  ├─ appendix/...
+│  ├─ processing/...
+│  ├─ new.ipynb
+│  └─ main.py
+└─ web/
+   ├─ static/style.css
+   ├─ templates/index.html
+   ├─ requirements.txt
+   └─ app.py
 ```
 
 ## Data
 
-We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/metadata/SOURCES.md`](https://github.com/thomasha1310/phishfence/blob/main/data/input/metadata/SOURCES.md).
+We used a variety of publicly available datasets. The raw data is contained within `phishfence/data/input`. The sources for the data are noted in [`phishfence/data/input/SOURCES.md`](https://github.com/thomasha1310/phishfence/blob/main/data/input/SOURCES.md).
 
 ### Pre-Processing
 
@@ -79,9 +78,30 @@ To increase the training options available to us, we [augmented](https://github.
 
 The augmented data was exported as `emails_augmented.csv`.
 
-## Methods
+## Installation & Usage
 
-## Conclusions
+Clone the repository:
+```
+git clone https://github.com/thomasha1310/phishfence.git
+cd phishfence
+```
+
+### Web Application
+
+Install dependencies with pip:
+```
+pip install -r web/requirements.txt
+```
+
+Create a `.env` file in `phishfence/` with your Gemini API key:
+```
+GEMINI_API_KEY="<YOUR API KEY HERE>"
+```
+
+Activate the Flask server:
+```
+python web/app.py
+```
 
 ## License
 
