@@ -1,36 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8"/>
     <title>PhishFence</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Bootstrap CSS (optional) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
       .highlight { background-color: yellow; font-weight: bold; }
     </style>
-</head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">PhishFence</h1>
-        <form method="POST">
-            <div class="mb-3">
-                <textarea name="email" class="form-control" rows="10" placeholder="Paste your email here...">{{ email_text or '' }}</textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Detect</button>
-        </form>
-        {% if result %}
-            <div class="alert mt-4 {{ alert_class }}">
-                <strong>{{ result }}</strong> (Confidence: {{ confidence }}%)
-            </div>
-        {% endif %}
-        {% if highlighted_email %}
-            <div class="mt-4">
-                <h5>Why this result?</h5>
-                <div style="white-space: pre-wrap; font-family: inherit;">
-                    {{ highlighted_email|safe }}
-                </div>
-            </div>
-        {% endif %}
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <h1>PhishFence</h1>
+
+      <!-- Notice: action="/" and method="post" -->
+      <form method="post" action="/">
+        <div class="form-group">
+          <!-- No stray whitespace before/after Jinja or it becomes part of the value -->
+          <textarea
+            name="email"
+            class="form-control"
+            rows="6"
+            placeholder="Paste your email text here..."
+          >{{ email_text }}</textarea>
+        </div>
+        <!-- Bullet-proof submit button -->
+        <input
+          type="submit"
+          value="Analyze"
+          class="btn btn-primary"
+        />
+      </form>
+
+      <!-- This block only shows if result is set -->
+      {% if result %}
+        <div class="{{ alert_class }} mt-4 p-3">
+          <h4>{{ result }} ({{ confidence }}%)</h4>
+          <p>{{ highlighted_email|safe }}</p>
+        </div>
+      {% endif %}
     </div>
-</body>
+  </body>
 </html>
