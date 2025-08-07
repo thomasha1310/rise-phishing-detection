@@ -9,7 +9,18 @@
       rel="stylesheet"
     />
     <style>
-      .highlight { background-color: yellow; font-weight: bold; }
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      /* preserve line breaks in explanation */
+      .explanation {
+        white-space: pre-wrap;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 4px;
+        border: 1px solid #e0e0e0;
+      }
     </style>
   </head>
 
@@ -41,6 +52,16 @@
         <div class="{{ alert_class }} mt-4 p-3">
           <h4>{{ result }} ({{ confidence }}%)</h4>
           <p>{{ highlighted_email|safe }}</p>
+        </div>
+      {% endif %}
+
+      <!-- NEW: Explanation from Gemini -->
+      {% if explanation %}
+        <div class="mt-4">
+          <h4>Why did the model decide that?</h4>
+          <div class="explanation">
+            {{ explanation }}
+          </div>
         </div>
       {% endif %}
     </div>
