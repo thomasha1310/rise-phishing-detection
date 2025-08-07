@@ -7,8 +7,7 @@ dependencies:
   - pip:
       - flask
       - numpy
-      - shap
       - transformers
       - torch
-      - markupsafe
       - google-genai
+      - python-dotenv
