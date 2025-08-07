@@ -18,6 +18,7 @@ phishfence
 ├─ (.env)
 ├─ .gitattributes
 ├─ .gitignore
+├─ Poster.pdf
 ├─ LICENSE.md
 ├─ README.md
 ├─ environment.yml
@@ -44,7 +45,7 @@ phishfence
 └─ web/
    ├─ static/style.css
    ├─ templates/index.html
-   ├─ requirements.txt
+   ├─ environment.yml
    └─ app.py
 ```
 
@@ -90,7 +91,7 @@ cd phishfence
 
 Install dependencies with Mamba:
 ```
-mamba create --file ./web/environment.yml
+mamba create -n phishfence-web --file ./web/environment.yml
 mamba activate phishfence-web
 ```
 
